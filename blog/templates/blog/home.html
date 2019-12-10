@@ -2,8 +2,15 @@
 
 {% block content %}
    {% for getData in posts %}
-       <h1>{{ getData.title }}</h1>
-       <p> Buy {{ getData.author }} on {{ getData.date_posted }}</p>
-       <p> {{ getData.content }}</p>
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ getData.author }}</a>
+                        <small class="text-muted">{{ getData.date_posted }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ getData.title }}</a></h2>
+                <p class="article-content">{{ getData.content }}</p>
+            </div>
+        </article>
    {% endfor %}
 {% endblock content %}
