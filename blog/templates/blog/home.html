@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+   {% for getData in posts %}
+       <h1>{{ getData.title }}</h1>
+       <p> Buy {{ getData.author }} on {{ getData.date_posted }}</p>
+       <p> {{ getData.content }}</p>
+   {% endfor %}
+{% endblock content %}
